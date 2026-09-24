@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo Interestelar - Sobre</title>
+  <link rel="icon" href="img/astronautasemfundo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html" class="active">SOBRE</a></li>
+        <li><a href="aplicacoes.html">APLICAÇÕES</a></li>
+        <li><a href="bibliografia.html">BIBLIOGRAFIA</a></li>
+    <li class="dropdown">
+      <a href="creditos.html" class="active">CRÉDITOS ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="orientadores.html">Orientadores</a></li>
+        <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+      </ul>
+    </li>        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <div class="lang-container">
+      <a href="sobre.html" class="btn-idioma">Português 🇧🇷</a>
+      <a href="sobreeng.html" class="btn-idioma2">English 🇺🇸</a>
+    </div>  
+  </header>
+
+  <main>
+    <section class="content-section card-style">
+      <h2>Conheça empresas famosas e confiáveis</h2>
+    
+      <div class="topic-grid">
+
+        <div class="topic-card">
+          <div class="card-icon">
+            <img src="img/ns.png" width="70" height="70" alt="Suborbital">
+          </div>
+          <h3>Blue Origin</h3>
+          <p>Conheça os voos suborbitais e o foguete New Shepard voltados para passageiros civis</p>
+          <button class="btn-info" onclick="openModal('modal1')">Mais Informações</button>
+        </div>
+
+        <div class="topic-card">
+          <div class="card-icon">
+            <img src="img/feather.png" width="70" height="70" alt="Orbital">
+          </div>
+          <h3>Virgin Galactic</h3>
+          <p>Explore a experiência de voo com o avião espacial VSS Unity e a gravidade zero</p>
+          <button class="btn-info" onclick="openModal('modal2')">Mais Informações</button>
+        </div>
+
+        <div class="topic-card3">
+          <div class="card-icon">
+            <img src="img/diamonte.png" width="65" height="65" alt="Saúde">
+          </div>
+          <h3>RocketBreaks & Luxo</h3>
+          <p>Descubra as agências que planejam pacotes de turismo e aventuras temáticas espaciais</p>
+          <button class="btn-info" onclick="openModal('modal3')">Mais Informações</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+      
+      <img src="img/ns.png" alt="Blue Origin New Shepard" class="modal-img" style="max-width: 150px; display: block; margin: 10px auto;">
+      
+      <p class="modal-text">
+        Fundada por Jeff Bezos, a Blue Origin foca em voos suborbitais com o foguete reutilizável <b>New Shepard</b><br><br>
+        • <strong>Altitude:</strong> Ultrapassa a Linha de Kármán (100 km)<br>
+        • <strong>Experiência:</strong> 3 a 5 minutos de gravidade zero e vista panorâmica da Terra<br><br>
+       <b>Valores estimados:</b>  Entre US$ 250.000 e US$ 450.000 por assento (sem tabela pública de preços fixos)
+      </p>
+
+      <a href="https://www.blueorigin.com" target="_blank" class="btn-oficial">Acessar Site</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+      <img src="img/feather.png" alt="Virgin Galactic" class="modal-img" style="max-width: 150px; display: block; margin: 10px auto;">
+
+      <p class="modal-text">
+        A Virgin Galactic utiliza um conceito diferente: um avião de transporte que lança uma espaçonave foguete (como a VSS Unity) a partir do ar<br><br>
+        • <strong>Foco:</strong> Proporcionar uma experiência imersiva de voo espacial para turistas e pesquisadores<br>
+        • <strong>Treinamento:</strong> Passageiros passam por dias de preparação física antes do voo<br><br>
+        <b>Valor atual do bilhete:</b> Custos recentes fixados na faixa de US$ 750.000 por assento (anteriormente comercializados por volta de US$ 450.000)</p>
+
+      <a href="https://www.virgingalactic.com" target="_blank" class="btn-oficial">Acessar Site</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+
+      <img src="img/diamonte.png" alt="RocketBreaks" class="modal-img" style="max-width: 120px; display: block; margin: 10px auto;">
+
+      <p class="modal-text">
+        Empresas de curadoria e agências de viagens especializadas, como a <b>RocketBreaks</b>, planejam estruturar pacotes turísticos completos combinando hotéis orbitais, voos e aventuras espaciais exclusivas<br><br>
+        O mercado busca viabilizar o turismo de luxo fora do planeta nas próximas décadas<br><br>
+Custos Personalizados: Os pacotes são montados sob medida de acordo com a preferência do cliente, os preços variam bastante conforme o tipo de aventura escolhida (de passeios de gravidade zero na Terra até reservas de bilhetes espaciais de alto padrão).      </p>
+
+      <a href="https://rocketbreaks.com" target="_blank" class="btn-oficial">Acessar Site</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>ETEC DE HORTOLÂNDIA 2026 – ©Todos os direitos reservados</p>
+    <p><small>Trabalho acadêmico sem fins lucrativos</small></p>
+  </footer>
+
+  <script>
+     function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Fechar a janela modal se o usuário clicar fora da caixa
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>

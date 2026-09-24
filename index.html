@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo Interestelar - Home</title>
+  <link rel="icon" href="img/astronautasemfundo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+        <li><a href="aplicacoes.html">APLICAÇÕES</a></li>
+        <li><a href="bibliografia.html">BIBLIOGRAFIA</a></li>
+    <li class="dropdown">
+      <a href="creditos.html" class="active">CRÉDITOS ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="orientadores.html">Orientadores</a></li>
+        <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+      </ul>
+    </li>        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+<div class="lang-container">
+      <a href="index.html" class="btn-idioma">Português 🇧🇷</a>
+      <a href="indexeng.html" class="btn-idioma2">English 🇺🇸</a>
+    </div>  
+</header>
+  <main>
+    <section class="page-section">
+      <div class="carousel-container">
+        <div class="carousel-slide fade">
+          <img src="img/nre.jpg" alt="Vista da Terra do Espaço">
+          <div class="carousel-caption">
+            <h2>Bem-vindos ao Futuro</h2>
+            <p>A era das viagens espaciais comerciais começou</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide fade">
+          <img src="img/orazl0ikdwke1.png" alt="Foguete Espacial">
+          <div class="carousel-caption">
+            <h2>Navegação Interplanetária</h2>
+            <p>Descubra como a tecnologia está transformando o impossível em realidade</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide fade">
+          <img src="img/satelite2.jpg" alt="Órbita Terrestre">
+          <div class="carousel-caption">
+            <h2>Experiência Orbital</h2>
+            <p>Sinta a gravidade zero e veja a curvatura da Terra</p>
+          </div>
+        </div>
+
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="home-intro">
+        <h2>O panorama atual e o futuro da exploração espacial humana comercial, destacando inovações tecnológicas, acessibilidade e perspectivas da navegação entre estrelas</h2>
+      </div>
+
+      <div class="home-cards">
+        <div class="card-item">
+          <img src="img/ns.png" width="56" alt="Suborbital">
+          <h3>Blue Origin</h3>
+          <p>A Blue Origin é uma empresa de turismo espacial que oferece voos suborbitais a bordo de sua nave espacial New Shepard</p>
+                <a href="sobre.html" class="btn-saibamais">Saiba mais</a>
+
+        </div>
+
+        <div class="card-item">
+          <img src="img/feather.png" width="56" alt="Orbital">
+          <h3>Virgin Galactic</h3>
+          <p>A Virgin Galactic é uma empresa de turismo espacial que oferece voos suborbitais projetados para uma experiência incrível com ausência de gravidade</p>
+                <a href="sobre.html" class="btn-saibamais">Saiba mais</a>
+        </div>
+        <div class="card-item">
+          <img src="img/diamonte.png" width="55" alt="Interestelar">
+          <h3>RocketBreaks</h3>
+          <p>A RocketBreaks é uma empresa de turismo espacial que oferece experiências de luxo projetadas para levar indivíduos a aventuras temáticas espaciais notáveis.</p>
+                <a href="sobre.html" class="btn-saibamais">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ETEC DE HORTOLÂNDIA 2026 – ©Todos os direitos reservados</p>
+    <p><small>Trabalho acadêmico sem fins lucrativos</small></p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    let timer = null;
+
+    showSlides(slideIndex);
+    startTimer();
+
+    function moveSlide(n) {
+      clearInterval(timer);
+      showSlides(slideIndex += n);
+      startTimer();
+    }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("carousel-slide");
+      if (slides.length === 0) return;
+
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+    function startTimer() {
+      timer = setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+      }, 7000);
+    }
+  </script>
+
+</body>
+
+</html>

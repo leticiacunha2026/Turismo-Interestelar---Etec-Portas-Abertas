@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstellar Tourism - About</title>
+  <link rel="icon" href="img/astronautasemfundo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="indexeng.html">HOME</a></li>
+        <li><a href="sobreeng.html" class="active">ABOUT</a></li>
+        <li><a href="aplicacoeseng.html">APPLICATIONS</a></li>
+        <li><a href="bibliografiaeng.html">BIBLIOGRAPHY</a></li>
+        <li class="dropdown">
+          <a href="creditoseng.html" class="active">CREDITS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="orientadoreseng.html">Advisors</a></li>
+            <li><a href="desenvolvedoreseng.html">Developers</a></li>
+          </ul>
+        </li>
+        <li><a href="contatoeng.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="lang-container">
+      <a href="sobre.html" class="btn-idioma">Português 🇧🇷</a>
+      <a href="sobreeng.html" class="btn-idioma2">English 🇺🇸</a>
+    </div>  
+  </header>
+
+  <main>
+    <section class="content-section card-style">
+      <h2>Discover famous and reliable companies</h2>
+    
+      <div class="topic-grid">
+
+        <div class="topic-card">
+          <div class="card-icon">
+            <img src="img/ns.png" width="70" height="70" alt="Suborbital">
+          </div>
+          <h3>Blue Origin</h3>
+          <p>Learn about suborbital flights and the New Shepard rocket aimed at civilian passengers</p>
+          <button class="btn-info" onclick="openModal('modal1')">More Information</button>
+        </div>
+
+        <div class="topic-card">
+          <div class="card-icon">
+            <img src="img/feather.png" width="70" height="70" alt="Orbital">
+          </div>
+          <h3>Virgin Galactic</h3>
+          <p>Explore the flight experience with the VSS Unity spaceplane and zero gravity</p>
+          <button class="btn-info" onclick="openModal('modal2')">More Information</button>
+        </div>
+
+        <div class="topic-card3">
+          <div class="card-icon">
+            <img src="img/diamonte.png" width="65" height="65" alt="Luxury">
+          </div>
+          <h3>RocketBreaks & Luxury</h3>
+          <p>Discover agencies planning tourism packages and space-themed adventures</p>
+          <button class="btn-info" onclick="openModal('modal3')">More Information</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+      
+      <img src="img/ns.png" alt="Blue Origin New Shepard" class="modal-img" style="max-width: 150px; display: block; margin: 10px auto;">
+      
+      <p class="modal-text">
+        Founded by Jeff Bezos, Blue Origin focuses on suborbital flights with the reusable <b>New Shepard</b> rocket.<br><br>
+        • <strong>Altitude:</strong> Crosses the Kármán Line (100 km)<br>
+        • <strong>Experience:</strong> 3 to 5 minutes of zero gravity and panoramic views of Earth<br><br>
+        <b>Estimated Values:</b> Between US$ 250,000 and US$ 450,000 per seat (no public fixed price list available)
+      </p>
+
+      <a href="https://www.blueorigin.com" target="_blank" class="btn-oficial">Visit Website</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+      <img src="img/feather.png" alt="Virgin Galactic" class="modal-img" style="max-width: 150px; display: block; margin: 10px auto;">
+
+      <p class="modal-text">
+        Virgin Galactic uses a different concept: a carrier aircraft that launches a rocket-powered spaceship (like VSS Unity) from the air.<br><br>
+        • <strong>Focus:</strong> Provide an immersive space flight experience for tourists and researchers.<br>
+        • <strong>Training:</strong> Passengers go through days of physical preparation before the flight.<br><br>
+        <b>Current Ticket Price:</b> Recent costs set around US$ 750,000 per seat (previously sold for about US$ 450,000).
+      </p>
+
+      <a href="https://www.virgingalactic.com" target="_blank" class="btn-oficial">Visit Website</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+
+      <img src="img/diamonte.png" alt="RocketBreaks" class="modal-img" style="max-width: 120px; display: block; margin: 10px auto;">
+
+      <p class="modal-text">
+        Curatorial companies and specialized travel agencies, like <b>RocketBreaks</b>, plan to structure complete tourism packages combining orbital hotels, flights, and exclusive space adventures.<br><br>
+        The market aims to make off-planet luxury tourism viable in the coming decades.<br><br>
+        <b>Custom Costs:</b> Packages are custom-tailored according to client preferences, with prices varying greatly depending on the chosen type of adventure (ranging from zero-gravity tours on Earth to high-end space ticket bookings).
+      </p>
+
+      <a href="https://rocketbreaks.com" target="_blank" class="btn-oficial">Visit Website</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>ETEC DE HORTOLÂNDIA 2026 – ©All rights reserved</p>
+    <p><small>Non-profit academic work</small></p>
+  </footer>
+
+  <script>
+     function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Close the modal window if the user clicks outside the box
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>

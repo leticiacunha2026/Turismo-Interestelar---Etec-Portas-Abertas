@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo Interestelar - Contato</title>
+  <link rel="icon" href="img/astronautasemfundo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+        <li><a href="aplicacoes.html">APLICAÇÕES</a></li>
+        <li><a href="bibliografia.html">BIBLIOGRAFIA</a></li>
+        
+        <li class="dropdown">
+          <a href="#">CRÉDITOS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="orientadores.html">Orientadores</a></li>
+            <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contato.html" class="active">CONTATO</a></li>
+      </ul>
+    </nav>
+    <div class="lang-container">
+      <a href="contato.html" class="btn-idioma">Português 🇧🇷</a>
+      <a href="contatoeng.html" class="btn-idioma2">English 🇺🇸</a>
+    </div>  
+  </header>
+
+  <main>
+    <section class="content-section card-style">
+      <h2>Fale Conosco</h2>
+      <form id="formContato" style="margin-top: 25px;">
+        
+        <div style="margin-bottom: 20px;">
+          <label for="nome" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Seu Nome:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Seu E-mail:</label>
+          <input type="email" id="email" name="email" required placeholder="exemplo@email.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label for="assunto" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" required placeholder="Ex: Dúvida sobre pacotes da Blue Origin" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px;">
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <label for="mensagem" style="display: block; margin-bottom: 8px; font-weight: 500; color: #00d2ff;">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 15px; resize: none;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-oficial" style="cursor: pointer; width: 100%; padding: 14px; font-size: 16px; font-weight: bold; border: none; border-radius: 8px; background: linear-gradient(135deg, #00d2ff, #3a7bd5); color: white; transition: opacity 0.3s ease;">
+          Enviar
+        </button>
+
+      </form>
+
+      <div id="mensagemSucesso" style="display: none; margin-top: 20px; padding: 15px; background: rgba(0, 255, 128, 0.15); border: 1px solid #00ff80; color: #00ff80; border-radius: 8px; text-align: center; font-weight: 500;">
+        Mensagem enviada com sucesso! Agradecemos o contato.
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>ETEC DE HORTOLÂNDIA 2026 – ©Todos os direitos reservados</p>
+    <p><small>Trabalho acadêmico sem fins lucrativos</small></p>
+  </footer>
+
+  <script>
+    document.getElementById('formContato').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const aviso = document.getElementById('mensagemSucesso');
+      aviso.style.display = 'block';
+
+      this.reset();
+
+      setTimeout(function() {
+        aviso.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
